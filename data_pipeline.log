@@ -1,0 +1,23 @@
+2024-11-20 23:38:16,241 - INFO - Data pipeline started.
+2024-11-20 23:38:16,242 - INFO - Starting data extraction...
+2024-11-20 23:38:16,255 - ERROR - Error during data extraction: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2024-11-20 23:38:16,255 - ERROR - Data pipeline failed: ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+2024-11-20 23:47:32,156 - INFO - Data pipeline started.
+2024-11-20 23:47:32,156 - INFO - Starting data extraction...
+2024-11-20 23:47:32,465 - INFO - Extracted 4 rows from on-premises database.
+2024-11-20 23:47:32,466 - INFO - Starting data transformation...
+2024-11-20 23:47:32,467 - INFO - Data transformation completed.
+2024-11-20 23:47:32,468 - INFO - Starting data loading...
+2024-11-20 23:47:35,655 - ERROR - Error during data loading: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Sales' when IDENTITY_INSERT is set to OFF. (544) (SQLExecDirectW)")
+[SQL: INSERT INTO [Sales] ([SaleID], [ProductName], [Quantity], [Price], [Total], [SalesDate], [Region], [ProcessedTimestamp]) VALUES (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1, 'Product A', 10, 15.5, 155.0, datetime.datetime(2024, 11, 20, 0, 0), 'North', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692), 2, 'Product B', 5, 25.0, 125.0, datetime.datetime(2024, 11, 20, 0, 0), 'East', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692), 3, 'Product C', 12, 7.75, 93.0, datetime.datetime(2024, 11, 20, 0, 0), 'West', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692), 5, 'Product E', 8, 12.3, 98.4, datetime.datetime(2024, 11, 20, 0, 0), 'North', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692))]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-20 23:47:35,655 - ERROR - Data pipeline failed: (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Sales' when IDENTITY_INSERT is set to OFF. (544) (SQLExecDirectW)")
+[SQL: INSERT INTO [Sales] ([SaleID], [ProductName], [Quantity], [Price], [Total], [SalesDate], [Region], [ProcessedTimestamp]) VALUES (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?), (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1, 'Product A', 10, 15.5, 155.0, datetime.datetime(2024, 11, 20, 0, 0), 'North', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692), 2, 'Product B', 5, 25.0, 125.0, datetime.datetime(2024, 11, 20, 0, 0), 'East', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692), 3, 'Product C', 12, 7.75, 93.0, datetime.datetime(2024, 11, 20, 0, 0), 'West', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692), 5, 'Product E', 8, 12.3, 98.4, datetime.datetime(2024, 11, 20, 0, 0), 'North', datetime.datetime(2024, 11, 20, 23, 47, 32, 466692))]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-21 00:19:46,831 - INFO - Fetching data from the source database.
+2024-11-21 00:19:46,833 - INFO - Data fetched successfully.
+2024-11-21 00:19:46,833 - INFO - Loading data into the target database.
+2024-11-21 00:19:46,944 - INFO - Data successfully loaded into the target database.
+2024-11-21 00:19:46,957 - INFO - Data pipeline completed successfully.

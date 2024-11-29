@@ -1,0 +1,16 @@
+2024-11-21 01:15:23,067 - INFO - Starting data extraction from the CSV file.
+2024-11-21 01:15:23,081 - INFO - Extracted 5 rows of data.
+2024-11-21 01:15:23,082 - INFO - Starting data transformation.
+2024-11-21 01:15:23,088 - INFO - Data transformation complete. 5 rows after transformation.
+2024-11-21 01:15:23,089 - INFO - Starting data load into SQLite database.
+2024-11-21 01:15:23,092 - ERROR - Error during data load: Error binding parameter 4 - probably unsupported type.
+2024-11-21 01:15:23,093 - ERROR - ETL pipeline failed: Error binding parameter 4 - probably unsupported type.
+2024-11-21 01:15:23,094 - INFO - ETL pipeline execution finished.
+2024-11-21 01:23:01,038 - INFO - Starting data extraction from the CSV file.
+2024-11-21 01:23:01,062 - INFO - Extracted 5 rows of data.
+2024-11-21 01:23:01,064 - INFO - Starting data transformation.
+2024-11-21 01:23:01,073 - INFO - Data transformation complete. 5 rows after transformation.
+2024-11-21 01:23:01,073 - INFO - Starting data load into SQLite database.
+2024-11-21 01:23:01,111 - INFO - Data load complete. 5 rows inserted.
+2024-11-21 01:23:01,111 - INFO - ETL pipeline completed successfully.
+2024-11-21 01:23:01,113 - INFO - ETL pipeline execution finished.

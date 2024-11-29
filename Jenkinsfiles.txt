@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    environment {
+        // Define any environment variables (optional)
+        PYTHON_ENV = 'python3' // Change to 'python' or your virtual environment path if needed
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out code from Git repository...'
+                // Replace 'main' with your branch name
+                git branch: 'main', url: 'https://github.com/uaxr22/jenkinsTest.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                echo 'Installing dependencies...'
+                // Install Python dependencies
+                sh "${PYTHON_ENV} -m pip install --upgrade pip"
+                sh "${PYTHON_ENV} -m pip install -r requirements.txt"
+            }
+        }
+
+        stage('Run Python Script') {
+            steps {
+                echo 'Running Python script...'
+                // Run the Python script
+                sh "${PYTHON_ENV} micsql.py"
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                echo 'Archiving logs and outputs...'
+                // Archive output files or logs
+                archiveArtifacts artifacts: 'output/**/*', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline execution completed.'
+            // Clean up workspace if needed
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check logs for errors.'
+        }
+    }
+}
